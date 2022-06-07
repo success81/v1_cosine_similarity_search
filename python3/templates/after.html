@@ -1,0 +1,38 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>NAICS</th>
+        <th>State</th>
+        <th>Women Owned</th>
+        <th>8A Company</th>
+        <th>Disabled Vet</th>
+        <th>Hub Zone</th>
+        <th>Minority Ownership</th>
+        <th>NNSA</th>
+        <th>Capability Statement</th>
+        <th>Smart Filter Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in data %}
+        <tr>
+          <td>{{ data[0] }}</td>
+          <td>{{ data[1] }}</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>{{ data[4] }}</td>
+          <td>{{ data[5] }}</td>
+          <td>{{ data[6] }}</td>
+          <td>{{ data[7] }}</td>
+          <td>{{ data[8] }}</td>
+          <td><a href="{{ data[9] }}">Link</a></td>
+          <td>{{ data[10] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
